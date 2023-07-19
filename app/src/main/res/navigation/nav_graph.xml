@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_graph"
+    app:startDestination="@id/homeFragment">
+
+    <fragment
+        android:id="@+id/homeFragment"
+        android:name="com.example.adminpkart.HomeFragment"
+        android:label="fragment_home"
+        tools:layout="@layout/fragment_home" >
+        <action
+            android:id="@+id/action_homeFragment_to_all_order_activity"
+            app:destination="@id/all_order_activity" />
+        <action
+            android:id="@+id/action_homeFragment_to_add_slider_Fragment"
+            app:destination="@id/add_slider_Fragment" />
+        <action
+            android:id="@+id/action_homeFragment_to_products_Fragment"
+            app:destination="@id/products_Fragment" />
+        <action
+            android:id="@+id/action_homeFragment_to_categoryFragment"
+            app:destination="@id/categoryFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/addCategoryFragment"
+        android:name="com.example.adminpkart.AddCategoryFragment"
+        android:label="fragment_add_category"
+        tools:layout="@layout/fragment_add_category" />
+    <fragment
+        android:id="@+id/add_products_Fragment"
+        android:name="com.example.adminpkart.Add_products_Fragment"
+        android:label="fragment_add_products_"
+        tools:layout="@layout/fragment_add_products_" />
+    <fragment
+        android:id="@+id/add_slider_Fragment"
+        android:name="com.example.adminpkart.Add_slider_Fragment"
+        android:label="fragment_add_slider_"
+        tools:layout="@layout/fragment_add_slider_" />
+    <fragment
+        android:id="@+id/categoryFragment"
+        android:name="com.example.adminpkart.CategoryFragment"
+        android:label="fragment_category"
+        tools:layout="@layout/fragment_category" >
+        <action
+            android:id="@+id/action_categoryFragment_to_addCategoryFragment"
+            app:destination="@id/addCategoryFragment" />
+    </fragment>
+    <activity
+        android:id="@+id/all_order_activity"
+        android:name="com.example.adminpkart.All_order_activity"
+        android:label="activity_all_order"
+        tools:layout="@layout/activity_all_order" />
+    <fragment
+        android:id="@+id/products_Fragment"
+        android:name="com.example.adminpkart.Products_Fragment"
+        android:label="fragment_products_"
+        tools:layout="@layout/fragment_products_" >
+        <action
+            android:id="@+id/action_products_Fragment_to_add_products_Fragment"
+            app:destination="@id/add_products_Fragment" />
+    </fragment>
+</navigation>
